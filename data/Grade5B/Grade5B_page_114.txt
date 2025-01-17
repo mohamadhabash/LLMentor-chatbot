@@ -1,0 +1,1 @@
+small p32 snake p28 snow p28 tape p10 taxi p56 thirsty p8 space station speaking p20 spring p31 train p56 truck p56 under p64 p57 stop p54 strong p32 summer p31 wait p54 wallet p72 watch p72 table p64 tail p46 tap p10 watching TV p24 weak p32 winter p31 108 109

@@ -1,0 +1,84 @@
+# Python Bytecode Files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+
+# Test and Coverage Files
+*.coverage
+.cache/
+.coverage.*
+
+# Logs and Debugging Files
+*.log
+debug.log
+*.pid
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment Variables
+.env
+.env.*
+
+# Streamlit Cache and Config
+.streamlit/
+.streamlit_cache/
+__streamlit__
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Docker-Related Files
+docker-compose.override.yml
+.dockerignore
+*.tmp
+*.vhdx
+
+# IDE and Editor Configurations
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Temporary Files
+*.tmp
+*.temp
+~*
+
+# Compiled C extensions
+*.so
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit Test / pytest
+.cache/
+*.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Generated Documentation
+docs/_build/
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+*.egg
+.eggs/
+*.tar.gz
+*.whl
