@@ -1,4 +1,4 @@
-# Grade-Specific Chatbot 🤖
+# Grade-Specific Chatbot 🤖 [![Docker Pulls](https://img.shields.io/docker/pulls/mohammadhabash/grade-specific-chatbot)](https://hub.docker.com/r/mohammadhabash/grade-specific-chatbot)
 
 A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. This chatbot answers curriculum-specific questions based on textbooks using Retrieval-Augmented Generation (RAG) and FAISS for efficient query matching. **Page-based chunking** has been applied to enhance retrieval performance, ensuring precise alignment between the query and the relevant context from the textbooks. The solution is fully containerized, deployable with Docker, and user-friendly.
 
