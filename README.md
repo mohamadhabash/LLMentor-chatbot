@@ -103,7 +103,36 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
 
   Question: [User's Query]"
 
-- Fallback Response: If the context score is below a threshold, the chatbot responds with:
 
-  ```plaintext
-  "Sorry, I can only answer questions based on the books for your grade."
+### **6. Response Generation**
+- **Script**: `qa_model.py`
+- Uses the Groq API with Llama3 to generate responses:
+  - If the context is relevant, generates a detailed answer.
+  - If not, returns the fallback response: 
+    ```plaintext
+    "Sorry, I can only answer questions based on the books for your grade."
+    ```
+
+---
+
+## Docker Instructions
+
+### **1. Pull the Docker Image from Dockerhub**
+```bash
+docker pull mohammadhabash/grade-specific-chatbot:latest
+```
+
+### **2. Run the Docker Image**
+- Without Authentication (Dropdown menu)
+  ```bash
+  docker run -p 8501:8501 mohammadhabash/grade-specific-chatbot:latest
+  ```
+- With Authentication
+  ```bash
+  docker run -p 8501:8501 mohammadhabash/grade-specific-chatbot:latest streamlit run app/chatbot_ui_with_auth.py
+  ```
+
+### **3. Access the App**
+```
+http://localhost:8501
+```
