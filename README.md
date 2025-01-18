@@ -117,7 +117,7 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
 
 ## Docker Instructions
 
-### **1. Pull the Docker Image from Dockerhub**
+### **1. Pull the Docker Image from Dockerhub** [![Docker Pulls](https://img.shields.io/docker/pulls/mohammadhabash/grade-specific-chatbot)](https://hub.docker.com/r/mohammadhabash/grade-specific-chatbot)
 ```bash
 docker pull mohammadhabash/grade-specific-chatbot:latest
 ```
