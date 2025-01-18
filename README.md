@@ -34,17 +34,20 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 
 ## Example Questions and Responses
 ### **Grade 4 Examples**
-- **Question**: "What animals live in Ajloun forest?"
-  - **Response**: "Ajloun forest is home to foxes, owls, and deer, as mentioned in your textbook."
+- **Question**: "Describe the animals in Ajloun Forest."
+  - **Response**: "In Ajloun Forest, there are big animals like deer, jackals, and wolves. Jackals and wolves are more dangerous than deer. There are also small animals like squirrels that live in the trees."
 - **Question**: "What time did Uncle Issa arrive?"
-  - **Response**: "Uncle Issa arrived at 7 PM according to the story."
+  - **Response**: "According to the context, Uncle Issa arrived at 11 o'clock in the morning."
 
 ### **Grade 5 Examples**
-- **Question**: "Complete this: If you’re happy and you know it..."
-  - **Response**: "Clap your hands! This is from the 'Rhythms and Listening' section in your book."
+- **Question**: "Answer this question from ACCIDENTAL INVENTIONS!: Read and circle. Which fact isn’t mentioned?"
+  - **Response**: The correct answer is:(b) The second food he cooked in the microwave was an egg. The passage doesn't mention what the second food was that Percy Spencer cooked in the microwave. It only mentions that the first food was popcorn!"
+    
+- **Question**: "Where are rugs and carpets made?"
+  - **Response**: "Rugs and carpets are made in Amman, Jordan."
 
 ### **Out-of-Scope Question**
-- **Question**: "Who discovered electricity?"
+- **Question**: "Who invented electricity?"
   - **Response**: "Sorry, I can only answer questions based on the books for your grade."
 
 ---
