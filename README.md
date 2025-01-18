@@ -145,7 +145,7 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
 - **Script**: `qa_model.py`
 - Uses the Groq API with Llama3 to generate responses:
   - If the context is relevant, generates a detailed answer.
-  - If not, returns the fallback response: 
+  - If not, and chunks similarity scores are lower than threshold, returns the fallback response: 
     ```plaintext
     "Sorry, I can only answer questions based on the books for your grade."
     ```
