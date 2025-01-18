@@ -20,7 +20,7 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 ![Without Authentication](https://i.imgur.com/kmVlQdK.gif)
 
 ### With Authentication
-[![With Authentication](https://i.imgur.com/UJZ1kGV.gif)
+![With Authentication](https://i.imgur.com/UJZ1kGV.gif)
 
 #### **Login Credentials**:
 - **Grade 4**: 
@@ -52,6 +52,43 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 
 ---
 
+## Repository Structure
+```
+grade-specific-chatbot/
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── app
+│   ├── __init__.py
+│   ├── chatbot_ui.py
+│   ├── chatbot_ui_with_auth.py
+│   └── qa_model.py
+├── data
+│   ├── Grade4A
+│   │   ├── Grade4A_page_1.txt
+│   │   ├── Grade4A_page_2.txt
+│   │   ├── etc
+│   ├── Grade4B
+│   │   ├── Grade4B_page_1.txt
+│   ├── Grade5A
+│   │   ├── Grade5A_page_1.txt
+│   ├── Grade5B
+│   │   ├── Grade5B_page_1.txt
+│   └── vectorDB
+│       ├── Grade 4
+│       │   ├── chunks.json
+│       │   └── embeddings.npy
+│       └── Grade 5
+│           ├── chunks.json
+│           └── embeddings.npy
+├── data_processing
+│   ├── extract_text.py
+│   └── utils.py
+└── requirements.txt
+```
+
+---
+
 ## Working Pipeline
 The following pipeline outlines how the chatbot processes and retrieves answers:
 
@@ -61,7 +98,7 @@ The following pipeline outlines how the chatbot processes and retrieves answers:
 - The page structure is preserved for accurate retrieval.
 
 ### **2. Preprocessing and Text Cleaning**
-- **Script**: `extract_text.py`
+- **Script**: `extract_text.py` & `utils.py`
 - **Steps Performed**:
   1. **Whitespace Cleanup**: Removed excessive whitespace and ensured proper spacing around punctuation (e.g., `" ." → "."`, `" ," → ","`).
   2. **Remove Patterns**:
@@ -115,12 +152,24 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
 
 ---
 
-## Docker Instructions
+## Running using Docker Instructions
 
 ### **1. Pull the Docker Image from Dockerhub** [![Docker Pulls](https://img.shields.io/docker/pulls/mohammadhabash/grade-specific-chatbot)](https://hub.docker.com/r/mohammadhabash/grade-specific-chatbot)
 ```bash
 docker pull mohammadhabash/grade-specific-chatbot:latest
 ```
+### OPTIONAL: Alternatively, Build Docker Image Locally
+If you prefer building the image locally:
+  #### Clone the repository:
+  ```bash
+    git clone https://github.com/mohamadhabash/grade-specific-chatbot.git
+    cd grade-specific-chatbot
+  ```
+  #### Build the Docker image:
+  ```bash
+    docker build -t mohammadhabash/grade-specific-chatbot:latest .
+  ```
+
 
 ### **2. Run the Docker Image**
 - Without Authentication (Dropdown menu)
@@ -136,3 +185,17 @@ docker pull mohammadhabash/grade-specific-chatbot:latest
 ```
 http://localhost:8501
 ```
+
+---
+
+## Contribution
+```
+Feel free to fork the repository, open issues, or submit pull requests. Contributions are welcome!
+```
+
+## License
+```
+This project is licensed under the GNU Affero General Public License (AGPL) for non-commercial use.
+Commercial use requires a separate license. Please contact mshabash187@gmail.com for details.
+```
+
