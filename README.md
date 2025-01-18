@@ -50,10 +50,23 @@ The following pipeline outlines how the chatbot processes and retrieves answers:
 
 ### **2. Preprocessing and Text Cleaning**
 - **Script**: `extract_text.py`
-- Applied steps:
-  - **Fixing Word Splits**: Corrected split words (e.g., `fl owers → flowers`).
-  - **Removing Unwanted Characters**: Eliminated stray punctuation, whitespace, and special symbols.
-  - **Preserving Sentence Order**: Ensured the logical flow of sentences by correctly merging content split into columns or sections.
+- **Steps Performed**:
+  1. **Whitespace Cleanup**: Removed excessive whitespace and ensured proper spacing around punctuation (e.g., `" ." → "."`, `" ," → ","`).
+  2. **Remove Patterns**:
+     - Removed unwanted text patterns like:
+       - References starting with `W/WWCC` and ending with `PM/PPMM`.
+       - CD references (e.g., `"CD123 45"`).
+       - Dates in the format `DD/MM/YYYY`.
+       - Times in the format `HH::MM`.
+       - URLs.
+  3. **Fix Repeated Characters**:
+     - Replaced sequences of repeated characters with normalized forms (e.g., `"aaannndd" → "and"`).
+     - Applied normalization to all words to ensure consistency.
+  4. **Remove Non-English or Non-Numeric Characters**:
+     - Removed any characters outside English alphabets, numbers, and standard punctuation.
+
+This cleaning ensures that the text extracted from PDFs is consistent, readable, and ready for embedding and retrieval steps.
+
 
 ### **3. Generating and Saving Embeddings**
 - **Script**: `qa_model.py`
