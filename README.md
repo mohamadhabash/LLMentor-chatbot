@@ -16,12 +16,19 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 
 ## Demo GIF
 
-### Without Authentication
+### Without Authentication (Dropdown Menu)
 ![Without Authentication](https://i.imgur.com/kmVlQdK.gif)
 
 ### With Authentication
-[![With Authentication](https://img.youtube.com/vi/<another_video_id>/0.jpg)](https://www.youtube.com/watch?v=<another_video_id>)
+[![With Authentication](https://i.imgur.com/UJZ1kGV.gif)
 
+#### **Login Credentials**:
+- **Grade 4**: 
+  - Username: `student1`
+  - Password: `password1`
+- **Grade 5**: 
+  - Username: `student2`
+  - Password: `password2`
 
 ---
 
