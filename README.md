@@ -14,10 +14,10 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 
 ---
 
-## Demo Videos
+## Demo GIF
 
 ### Without Authentication
-[![Without Authentication](https://img.youtube.com/vi/7yHPdQ5G1VM/0.jpg)](https://www.youtube.com/watch?v=7yHPdQ5G1VM)
+![Without Authentication](https://i.imgur.com/wOaqV4W.gif)
 
 ### With Authentication
 [![With Authentication](https://img.youtube.com/vi/<another_video_id>/0.jpg)](https://www.youtube.com/watch?v=<another_video_id>)
