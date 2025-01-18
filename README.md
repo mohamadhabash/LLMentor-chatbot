@@ -32,7 +32,7 @@ A powerful, containerized chatbot designed for Grade 4 and Grade 5 students. Thi
 
 ---
 
-## Example Questions and Responses
+## Example Questions and Generated Responses
 ### **Grade 4 Examples**
 - **Question**: "Describe the animals in Ajloun Forest."
   - **Response**: "In Ajloun Forest, there are big animals like deer, jackals, and wolves. Jackals and wolves are more dangerous than deer. There are also small animals like squirrels that live in the trees."
