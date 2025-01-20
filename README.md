@@ -139,7 +139,7 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
   Context: [Retrieved Chunks]
 
   Question: [User's Query]"
-
+  ```
 
 ### **6. Response Generation**
 - **Script**: `qa_model.py`
