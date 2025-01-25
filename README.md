@@ -93,12 +93,10 @@ grade-specific-chatbot/
 The following pipeline outlines how the chatbot processes and retrieves answers:
 
 ### **1. Text Extraction**
-- **Script**: `extract_text.py`
 - Text is extracted from the provided textbooks in **page-based chunks**, ensuring that the retrieved content aligns with the user’s query.
 - The page structure is preserved for accurate retrieval.
 
 ### **2. Preprocessing and Text Cleaning**
-- **Script**: `extract_text.py` & `utils.py`
 - **Steps Performed**:
   1. **Whitespace Cleanup**: Removed excessive whitespace and ensured proper spacing around punctuation (e.g., `" ." → "."`, `" ," → ","`).
   2. **Remove Patterns**:
@@ -118,19 +116,16 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
 
 
 ### **3. Generating and Saving Embeddings**
-- **Script**: `qa_model.py`
 - Used the **Jais Model** (`jinaai/jina-embeddings-v2-base-en`) via Hugging Face to generate high-quality embeddings for each page.
 - The embeddings are saved to a **FAISS index**, enabling efficient similarity-based retrieval.
 
 ### **4. FAISS-Based Retrieval**
-- **Script**: `qa_model.py`
 - How it works:
   1. Converts the user query into embeddings.
   2. Searches the FAISS index to retrieve the top-k most relevant pages (chunks).
   3. Returns the relevant pages and similarity scores.
 
 ### **5. Context and Query Formation**
-- **Script**: `qa_model.py`
 - Relevant pages (retrieved chunks) are combined to form the context.
 - The query and context are structured as:
   ```plaintext
@@ -142,7 +137,6 @@ This cleaning ensures that the text extracted from PDFs is consistent, readable,
   ```
 
 ### **6. Response Generation**
-- **Script**: `qa_model.py`
 - Uses the Groq API with Llama3 to generate responses:
   - If the context is relevant, generates a detailed answer.
   - If not, and chunks similarity scores are lower than threshold, returns the fallback response: 
