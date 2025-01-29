@@ -107,7 +107,7 @@ The following pipeline outlines how the chatbot processes and retrieves answers:
        - Times in the format `HH::MM`.
        - URLs.
   3. **Fix Repeated Characters**:
-     - Replaced sequences of repeated characters with normalized forms (e.g., `"aaannndd" → "and"`).
+     - Replaced sequences of repeated characters with normalized forms (e.g., `"aanndd" → "and"`).
      - Applied normalization to all words to ensure consistency.
   4. **Remove Non-English or Non-Numeric Characters**:
      - Removed any characters outside English alphabets, numbers, and standard punctuation.
