@@ -39,7 +39,7 @@ class QAModel:
             grade_chunks = []
             for book_path in books:
                 with open(book_path, "r", encoding="utf-8") as f:
-                    pages = f.read().split("\n---PAGE BREAK---\n")
+                    pages = f.read()
                     grade_chunks.extend([page.strip() for page in pages if page.strip()])
             text_chunks[grade] = grade_chunks
         return text_chunks
