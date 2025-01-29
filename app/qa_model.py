@@ -107,39 +107,4 @@ class QAModel:
             temperature=self.temperature,
         )
         return chat_completion.choices[0].message.content.strip()
-
-if __name__ == "__main__":
-    qa_model = QAModel(repo_path="/mnt/c/Users/Mohammed Habash/Desktop/classera-assignment/grade-specific-chatbot/")
-
-    # Example Grade-Books Mapping
-    grade_books = {
-        "Grade 4": [
-            f"{qa_model.data_path}/Grade4A/{file}" for file in os.listdir(f"{qa_model.data_path}/Grade4A")
-        ] + [
-            f"{qa_model.data_path}/Grade4B/{file}" for file in os.listdir(f"{qa_model.data_path}/Grade4B")
-        ],
-        "Grade 5": [
-            f"{qa_model.data_path}/Grade5A/{file}" for file in os.listdir(f"{qa_model.data_path}/Grade5A")
-        ] + [
-            f"{qa_model.data_path}/Grade5B/{file}" for file in os.listdir(f"{qa_model.data_path}/Grade5B")
-        ],
-    }
-
-    # Step 1: Load and Chunk Data
-    text_chunks = qa_model.load_text_files_page_based(grade_books)
-
-    # Step 2: Build FAISS Indices for Each Grade
-    indices = {}
-    chunk_mappings = {}
-    for grade, chunks in text_chunks.items():
-        indices[grade], chunk_mappings[grade] = qa_model.build_or_load_faiss_index(chunks, grade)
-
-    # Step 3: Example Query
-    user_grade = "Grade 5"
-    user_question = "Continue this and tell me in which section: If you’re happy and you know it,"
-    retrieved_chunks, scores = qa_model.retrieve_chunks_faiss(indices[user_grade], chunk_mappings[user_grade], user_question, top_k=5)
-
-    response = qa_model.generate_response(user_question, retrieved_chunks, np.mean(scores), threshold=0.5)
-
-    print(f"Question: {user_question}")
-    print(f"Answer: {response}")
+        
